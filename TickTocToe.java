@@ -13,20 +13,30 @@ public class TickTocToe {
         return null;
     }
     static String Choose() {
-
+        char ComputerChoice = 0;
         System.out.println("Enter Either 'X' or 'O' :  ");
+
         Scanner sc = new Scanner(System.in);
         char Choice = sc.next().charAt(0);
-        if (Choice == 'X')
-            System.out.println("You choose 'X' and Computer chooses 'O' ");
-        else if (Choice == 'O')
-            System.out.println("You choose 'O' and Computer chooses 'X' ");
+
+        if (Choice == 'X') {
+            ComputerChoice = 'O';
+        }
+
+        else if (Choice == 'O') {
+            ComputerChoice = 'X';
+        }
+
         else
             System.out.println("Invalid choice");
+
+        System.out.println("You choose '" +Choice+ "' and Computer chooses '" +ComputerChoice+ "' ");
+        
         return null;
     }
     public static void main(String[] args) {
 
+        char ComputerChoice;
         String StartArray = start();
         String Choice = Choose();
         System.out.println(Choice);
